@@ -6,15 +6,15 @@
   </head>
   <body>
     <h1>Commander un panier de fruits</h1>
-    <form name="commande">
+    <form name="commande" method="post" action="merci.html" >
       <table>
         <caption>Votre panier</caption>
         <thead>
           <tr>
-            <td>Item</td>
-            <td>Prix</td>
-            <td>Nombre</td>
-            <td>Sous-total</td>
+            <th>Item</th>
+            <th>Prix</th>
+            <th>Nombre</th>
+            <th>Sous-total</th>
           </tr>
         </thead>
         <tbody>
@@ -46,7 +46,7 @@
       </table>
       <p class="error invisible center">La valeur minimale des paniers est de 20$.</p>
       <div class="center">
-        <input id="conditions" type="checkbox" required>
+        <input id="conditions" name="conditions" type="checkbox" required>
         <label for="conditions">J'ai lu et j'accepte les conditions de vente.</label>
         <div class="boutons">
           <input id="submit" type="submit" disabled>

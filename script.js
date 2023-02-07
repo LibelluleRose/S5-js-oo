@@ -1,9 +1,10 @@
 //Variables
-let NbPeche = document.getElementById("nbPeches").value;
+
 let NbPeche = document.getElementById("nbPeches").value;
 let NbPomme = document.getElementById("nbPommes").value;
+
 //Créer une liste de fruit pour après appeler la fonction avec cette liste.
-let nom = document.cr
+let nom = document.
 
 
 let ConditionVente = document.getElementById("conditions").valueOf();
@@ -12,10 +13,10 @@ let PrixPeches = document.getElementById("prixPeches").textContent;
 PrixPeches
 
 
-//
+////////////////////////////////////
 class Fruit {
 
-    //Consctructeur
+    //Constructeur
     Fruit(nom, prix, qte) {
         this.nom = nom;
         this.prix = prix;
@@ -24,23 +25,22 @@ class Fruit {
     }
 
     //Méthode qui calcule et renvoie le sous-total
-    let SousTotal = this.prix * this.qte;
-    return SousTotal;
+CalculerSousTotal(){
+        return this.prix * this.qte;
+    }
 }
-//Fonction qui créer un fruit selon le html
-function (){
+/////////////////////////////////////////
+//Fonction qui créer un fruit
+function () {
+
+    //Remplir les variables avec les valeurs
+    let Prix = document.getElementById("prixPeches").value;
+    let NbPeche = document.getElementById("nbPeches").value;
+
     //Appeler le constructeur pour créer un fruit
-    const Peches = new Peches("")
-
+    const Peches = new Peches("Pêche", Prix , NbPeche)
 }
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////
 
 //Fonction qui met à jour le sous-total après un changement
 function Calculer_SousTotal() {
@@ -49,8 +49,6 @@ function Calculer_SousTotal() {
     let ancienPrix = document.getElementById("total").innerText;
     let nouveauPrix = +ancienPrix + +prix;  //+varible : convertir en numérique
     document.getElementById("Total").innerText = nouveauPrix;
-
-
 }
 
 

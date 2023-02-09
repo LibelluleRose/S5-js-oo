@@ -32,25 +32,25 @@ function MiseAJour(fruit) {
     //Ajouter sac pour le fruit rentré en param
     //calculer le nouveau sous-total
     //Inscrire le nouveau sous-total
-    if (fruit === "peche"){
+    if (fruit === "Peche"){
         SacPeches.qte = SacPeches.qte + 1;
-        let totalpeche = SacPeches.CalculerSousTotal();
-        document.getElementById("totalPeches").textContent = totalpeche;
+        totalpeche = SacPeches.CalculerSousTotal();
+        document.querySelector("#nbPeches").textContent = totalpeche + " $";
     }
     else if (fruit === "Poires"){
         SacPoires.qte = SacPoires.qte + 1;
-        let totalpoire = SacPoires.CalculerSousTotal();
-        document.getElementById("totalPoires").textContent = totalpoire;
+        totalpoire = SacPoires.CalculerSousTotal();
+        document.querySelector("#nbPoires").textContent = totalpoire + " $";
     }
     else if (fruit === "Pommes"){
         SacPommes.qte = SacPommes.qte + 1;
-        let totalpomme = SacPommes.CalculerSousTotal();
-        document.getElementById("totalPommes").textContent = totalpomme;
+        totalpomme = SacPommes.CalculerSousTotal();
+        document.querySelector("#nbPommes").textContent = totalpomme + " $";
     }
 
     //mise à jour du total
     let total = CalculerMontantFinal() //calculer montant
-    document.getElementById("total").textContent = total; //inscrire montant
+    document.getElementById("total").textContent = total + " $"; //inscrire montant
 }
 
 

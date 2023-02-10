@@ -22,6 +22,7 @@ function CalculerMontantFinal() {
         SacPoires.CalculerSousTotal() +
         SacPommes.CalculerSousTotal();
 
+
     return MontantTotalFinal;
 
 }
@@ -50,20 +51,20 @@ function MiseAJour(fruit) {
 
     //mise à jour du total
     let total = CalculerMontantFinal() //calculer montant
-    document.getElementById("total").textContent = total + " $"; //inscrire montant
+    document.getElementById("total").textContent = +total + " $"; //inscrire montant
 }
 
 
 function load(){
 
     //Création de trois fruit à partir de la class fruit
-    let NbSacPeches = +document.getElementById("nbPeches").value; //le + c'est pour déclarer que c'est une valeur numérique
-    let NbSacPoires = +document.getElementById("nbPoires").value;
-    let NbSacPommes = +document.getElementById("nbPommes").value;
+    let NbSacPeches = parseInt().document.getElementById("nbPeches").value; //le + c'est pour déclarer que c'est une valeur numérique
+    let NbSacPoires = document.getElementById("nbPoires").value;
+    let NbSacPommes = document.getElementById("nbPommes").value;
 
-    let PrixSacPeches = +document.getElementById("prixPeches").value;
-    let PrixSacPoires = +document.getElementById("prixPoires").value;
-    let PrixSacPommes = +document.getElementById("prixPommes").value;
+    let PrixSacPeches = document.getElementById("prixPeches").value;
+    let PrixSacPoires = document.getElementById("prixPoires").value;
+    let PrixSacPommes = document.getElementById("prixPommes").value;
 
     SacPeches = new Fruit("SacPeches", PrixSacPeches, NbSacPeches);
     SacPoires = new Fruit("SacPoires", PrixSacPoires, NbSacPoires);

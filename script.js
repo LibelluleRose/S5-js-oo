@@ -24,10 +24,8 @@ class SacFruit {
 
     //Méthode qui calcule et affiche le sous-total
     CalculerSousTotal() {
-        let newSousTotal = this.prix * this.qte;
-        // document.querySelector(#nbPeches).textContent = newSousTotal;
-        //  this.CalculerMontantFinal();
-        return newSousTotal;
+      
+        return this.prix * this.qte;
     }
 
     CalculerMontantFinal() {

@@ -3,7 +3,7 @@
 class Fruit {
 
     //Constructeur
-    Fruit(nom, prix, qte) {
+    Fruit(nom = "", prix = 0, qte = 0) {
         this.nom = nom;
         this.prix = prix;
         this.qte = qte;
@@ -34,7 +34,8 @@ function MiseAJour(fruit) {
     //calculer le nouveau sous-total
     //Inscrire le nouveau sous-total
     if (fruit === "Peche"){
-        SacPeches.qte = SacPeches.qte + 1;
+        // SacPeches.qte = SacPeches.qte + 1; //lire le inuput au lieu de faire +1
+        let qtepeche = document.getElementById("nbPeches").values;
         totalpeche = SacPeches.CalculerSousTotal();
         document.querySelector("#nbPeches").textContent = totalpeche + " $";
     }
@@ -51,20 +52,21 @@ function MiseAJour(fruit) {
 
     //mise à jour du total
     let total = CalculerMontantFinal() //calculer montant
-    document.getElementById("total").textContent = +total + " $"; //inscrire montant
+    parseInt(document.getElementById("total").textContent) = +total + " $"; //inscrire montant
+    //parseInt(document.getElementById("id ici").textcontent)//exemple de pierre-luc
 }
 
 
 function load(){
 
     //Création de trois fruit à partir de la class fruit
-    let NbSacPeches = parseInt().document.getElementById("nbPeches").value; //le + c'est pour déclarer que c'est une valeur numérique
-    let NbSacPoires = document.getElementById("nbPoires").value;
-    let NbSacPommes = document.getElementById("nbPommes").value;
+    const NbSacPeches = parseInt().document.getElementById("nbPeches").value; //le + c'est pour déclarer que c'est une valeur numérique
+    const NbSacPoires = document.getElementById("nbPoires").value;
+    const NbSacPommes = document.getElementById("nbPommes").value;
 
-    let PrixSacPeches = document.getElementById("prixPeches").value;
-    let PrixSacPoires = document.getElementById("prixPoires").value;
-    let PrixSacPommes = document.getElementById("prixPommes").value;
+    const PrixSacPeches = document.getElementById("prixPeches").value;
+    const PrixSacPoires = document.getElementById("prixPoires").value;
+    const PrixSacPommes = document.getElementById("prixPommes").value;
 
     SacPeches = new Fruit("SacPeches", PrixSacPeches, NbSacPeches);
     SacPoires = new Fruit("SacPoires", PrixSacPoires, NbSacPoires);
@@ -73,6 +75,8 @@ function load(){
 }
 
 
+sessionStorage.setItem("panier", panier);
+return true
 
 
 

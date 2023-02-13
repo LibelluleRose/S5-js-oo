@@ -1,16 +1,17 @@
-
 //Déclaration de la class Fruit
 class Fruit {
 
     //Constructeur
-    Fruit(nom = "Fruit", prix = 0, qte = 0) {
+    constructor(nom = "Fruit", prix = 0, qte = 0)
+    {
         this.nom = nom;
         this.prix = prix;
         this.qte = qte;
     }
 
     //Méthode qui calcule et affiche le sous-total
-    CalculerSousTotal() {
+    CalculerSousTotal()
+    {
         let newSousTotal = +this.prix * +this.qte;
         return +newSousTotal;
     }
@@ -20,9 +21,7 @@ class Fruit {
 function CalculerMontantFinal() {
     let MontantTotalFinal = +(SacPeches.CalculerSousTotal()) +
         +(SacPoires.CalculerSousTotal()) +
-            +(SacPommes.CalculerSousTotal());
-
-
+        +(SacPommes.CalculerSousTotal());
     return MontantTotalFinal;
 
 }
@@ -33,20 +32,18 @@ function MiseAJour(fruit) {
     //Ajouter sac pour le fruit rentré en param
     //calculer le nouveau sous-total
     //Inscrire le nouveau sous-total
-    if (fruit === "Peche"){
+    if (fruit === "Peche") {
         // SacPeches.qte = SacPeches.qte + 1; //lire le inuput au lieu de faire +1
         SacPeches.qte = +document.getElementById("nbPeches").value;
         SacPeches.prix = parseInt(document.getElementById("prixPeches").value);
         totalpeche = SacPeches.CalculerSousTotal();
         document.querySelector("#nbPeches").textContent = totalpeche + " $";
-    }
-    else if (fruit === "Poires"){
+    } else if (fruit === "Poires") {
         SacPoires.qte = +document.getElementById("nbPoires").value;
         SacPoires.prix = +document.getElementById("prixPoires").value;
         totalpoire = SacPoires.CalculerSousTotal();
         document.querySelector("#nbPoires").textContent = totalpoire + " $";
-    }
-    else if (fruit === "Pommes"){
+    } else if (fruit === "Pommes") {
         SacPommes.qte = +document.getElementById("nbPommes").value;
         SacPommes.prix = +document.getElementById("prixPommes").value;
         totalpomme = SacPommes.CalculerSousTotal();
@@ -60,7 +57,7 @@ function MiseAJour(fruit) {
 }
 
 
-function load(){
+function load() {
 
     /*//Création de trois fruit à partir de la class fruit
     const NbSacPeches = 0;//document.getElementById("nbPeches").value; //le + c'est pour déclarer que c'est une valeur numérique

@@ -58,7 +58,7 @@ class Panier {
 function CreerFruit() {
 
         //Remplir les variables avec les valeurs
-        let prixPeches = document.getElementById("prixPeches").value;
+        let prixPeches = document.getElementById("prixPeches").innerText;
         let NbPeche = document.getElementById("nbPeches").value;
 
         //Appeler le constructeur pour créer un fruit
@@ -66,7 +66,7 @@ function CreerFruit() {
 
 
         //Remplir les variables avec les valeurs
-        let prixPoires = document.getElementById("prixPoires").value;
+        let prixPoires = document.getElementById("prixPoires").innerText;
         let NbPoire = document.getElementById("nbPeches").value;
 
         //Appeler le constructeur pour créer un fruit
@@ -74,7 +74,7 @@ function CreerFruit() {
 
 
         //Remplir les variables avec les valeurs
-        let Prix = document.getElementById("prixPeches").value;
+        let Prix = document.getElementById("prixPeches").innerText;
         let NbPoire = document.getElementById("nbPeches").value;
 
         //Appeler le constructeur pour créer un fruit

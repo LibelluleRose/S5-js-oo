@@ -13,7 +13,7 @@ class Fruit {
     CalculerSousTotal()
     {
         let newSousTotal = +this.prix * +this.qte;
-        return +newSousTotal;
+        return newSousTotal;
     }
 }
 
@@ -35,17 +35,17 @@ function MiseAJour(fruit) {
     if (fruit === "Peche") {
         // SacPeches.qte = SacPeches.qte + 1; //lire le inuput au lieu de faire +1
         SacPeches.qte = +document.getElementById("nbPeches").value;
-        SacPeches.prix = parseInt(document.getElementById("prixPeches").value);
+        SacPeches.prix = parseInt(document.getElementById("prixPeches").innerText);
         totalpeche = SacPeches.CalculerSousTotal();
         document.querySelector("#nbPeches").textContent = totalpeche + " $";
     } else if (fruit === "Poires") {
         SacPoires.qte = +document.getElementById("nbPoires").value;
-        SacPoires.prix = +document.getElementById("prixPoires").value;
+        SacPoires.prix = +document.getElementById("prixPoires").innerText;
         totalpoire = SacPoires.CalculerSousTotal();
         document.querySelector("#nbPoires").textContent = totalpoire + " $";
     } else if (fruit === "Pommes") {
         SacPommes.qte = +document.getElementById("nbPommes").value;
-        SacPommes.prix = +document.getElementById("prixPommes").value;
+        SacPommes.prix = +document.getElementById("prixPommes").innerText;
         totalpomme = SacPommes.CalculerSousTotal();
         document.querySelector("#nbPommes").textContent = totalpomme + " $";
     }

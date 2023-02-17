@@ -12,8 +12,8 @@ class Fruit {
     //Méthode qui calcule et affiche le sous-total
     CalculerSousTotal()
     {
-        let newSousTotal = +this.prix * +this.qte;
-        return newSousTotal;
+      //  let newSousTotal = +;
+        return this.prix * +this.qte;
     }
 }
 
